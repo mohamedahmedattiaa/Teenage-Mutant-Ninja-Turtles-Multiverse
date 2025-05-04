@@ -25,7 +25,7 @@ class Player(pygame.sprite.Sprite):
 
         # Load walking frames (5 frames)
         for i in range(5):
-            self.al.append(sprite_sheet.get_image(i, 54, 78, 2, (0, 0, 0)))
+            self.al.append(sprite_sheet.get_image(i, 54, 78, 2, (0, 0,0,0)))
 
         # Load light attack frames (3 frames)
         for i in range(3):
