@@ -2,10 +2,10 @@ import pygame
 from sprits import Spritesheet
 
 class Player(pygame.sprite.Sprite):
-    def init(self, x, y, sprite_image, attack_image, leg_attack_image, ult_image, shield_image):
-        super().init()
+    def __init__(self, x, y, sprite_image, attack_image, leg_attack_image, ult_image, shield_image):
+        super().__init__()
         self.al = []  # Walk frames
-        self.attack_frames = []  # Light attack frames #menna
+        self.attack_frames = []  # Light attack frames
         self.leg_attack_frames = []  # Leg attack frames
         self.ult_frames = []  # Ult frames
         self.frame = 0
@@ -112,6 +112,7 @@ class Player(pygame.sprite.Sprite):
 
         # Animation logic
         current_time = pygame.time.get_ticks()
+
         if self.is_shielding:
             self.image = self.shield_image  # Just show shield image (static)
         elif self.is_ulting:
@@ -146,10 +147,10 @@ class Player(pygame.sprite.Sprite):
             self.frame = 0
             self.image = self.al[self.frame]
 
-        def draw(self, surface):
-            if self.facing_right:
-                surface.blit(self.image, (self.turtle_x, self.turtle_y))
-            else:
-                flipped_image = pygame.transform.flip(self.image, True, False)
-                flipped_image.set_colorkey((0, 0, 0))
-                surface.blit(flipped_image, (self.turtle_x, self.turtle_y))
+    def draw(self, surface):
+        if self.facing_right:
+            surface.blit(self.image, (self.turtle_x, self.turtle_y))
+        else:
+            flipped_image = pygame.transform.flip(self.image, True, False)
+            flipped_image.set_colorkey((0, 0, 0))
+            surface.blit(flipped_image, (self.turtle_x, self.turtle_y))
