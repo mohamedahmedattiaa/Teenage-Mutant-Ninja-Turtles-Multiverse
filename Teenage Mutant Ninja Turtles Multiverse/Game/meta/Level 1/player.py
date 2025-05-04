@@ -5,7 +5,7 @@ class Player(pygame.sprite.Sprite):
     def init(self, x, y, sprite_image, attack_image, leg_attack_image, ult_image, shield_image):
         super().init()
         self.al = []  # Walk frames
-        self.attack_frames = []  # Light attack frames
+        self.attack_frames = []  # Light attack frames #menna
         self.leg_attack_frames = []  # Leg attack frames
         self.ult_frames = []  # Ult frames
         self.frame = 0

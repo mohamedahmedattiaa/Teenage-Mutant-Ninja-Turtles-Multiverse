@@ -3,7 +3,7 @@ import os
 
 # ========== Initialize ==========
 pygame.init()
-pygame.mixer.init()
+pygame.mixer.init() #hh
 
 # ========== Screen Settings ==========
 WIDTH, HEIGHT = 1200, 720

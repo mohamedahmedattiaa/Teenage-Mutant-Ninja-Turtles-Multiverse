@@ -5,7 +5,7 @@ from player import Player
 # Initialize
 pygame.init()
 pygame.mixer.init()
-
+#w
 # Screen setup
 WIDTH, HEIGHT = 1200, 720
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
