@@ -1,7 +1,8 @@
 import pygame
 from player import Player  # Import the Player class from player.py
+from enemy import Enemy, spawn_enemy  # Import Enemy class and spawn function
 
-# Initialize Pygamed
+# Initialize Pygame
 pygame.init()
 
 # Set up the screen
@@ -10,23 +11,54 @@ pygame.display.set_caption("Meta venv \\ Raphael Level")
 
 # Load background and sprite images
 bg_index = pygame.image.load('images/bg1.jpg')
-walk = pygame.image.load('images/walk.png').convert_alpha()
-light_attack = pygame.image.load('images/La.png').convert_alpha()
-leg_attack = pygame.image.load('images/legA.png').convert_alpha()
-ult_attack = pygame.image.load('images/ult.png').convert_alpha()  # Load ult attack sprite
-shield = pygame.image.load('images/safe.png')  # Shield image (one frame)
+# Update sprite image paths to file paths
+player_images = {
+    "walk": 'images/walk.png',
+    "light_attack": 'images/La.png',
+    "leg_attack": 'images/legA.png',
+    "ult_attack": 'images/ult.png',
+    "shield": 'images/safe.png'
+}
+
+# Load enemy sprites
+enemy_images = {
+    "Ewalk": 'images/Ewalk.png',
+    "Eatt": 'images/Eatt.png',
+    "Edmg": 'images/Edmg.png',
+    "Edead": 'images/Edead.png'
+}
 
 # Create Player object
-player = Player(100, 500, walk, light_attack, leg_attack, ult_attack, shield)
+player = Player(
+    100, 500,
+    player_images["walk"],
+    player_images["light_attack"],
+    player_images["leg_attack"],
+    player_images["ult_attack"],
+    player_images["shield"]
+)
+
+# Create list of enemies
+enemy_list = []
+enemy_list.append(spawn_enemy(1100, 500, player))  # First enemy
+
+# Clock to control FPS
+clock = pygame.time.Clock()
 
 # Game loop
 running = True
 while running:
+    clock.tick(60)  # 60 FPS
     screen.blit(bg_index, (0, 0))
 
     # Update and draw player
     player.update()
     player.draw(screen)
+
+    # Update and draw enemies
+    for enemy in enemy_list:
+        enemy.update()
+        enemy.draw(screen)
 
     # Event handling
     for event in pygame.event.get():

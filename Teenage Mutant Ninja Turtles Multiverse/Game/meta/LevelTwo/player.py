@@ -13,7 +13,7 @@ class Player(pygame.sprite.Sprite):
         self.animation_cooldown = 150
         self.turtle_x = x
         self.turtle_y = y
-        self.speed = 0.5  # Normal speed
+        self.speed = 2  # Normal speed
         self.facing_right = True
 
         # Load sprite sheets

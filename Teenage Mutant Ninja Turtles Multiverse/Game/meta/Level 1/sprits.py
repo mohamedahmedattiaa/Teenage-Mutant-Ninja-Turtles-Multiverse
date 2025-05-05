@@ -1,7 +1,7 @@
 import pygame
 
 class Spritesheet():
-    def init(self, image):
+    def __init__(self, image):
         self.sheet =image
 
     def get_image(self ,frame,width, height,scale,color):

@@ -6,7 +6,7 @@ pygame.init()
 
 # Set up the screen
 screen = pygame.display.set_mode((1280, 720))
-pygame.display.set_caption("Meta venv \\ Miky Level")
+pygame.display.set_caption("Meta venv \\ Leo Level")
 
 # Load background and sprite images
 bg_index = pygame.image.load('images/background.png')
@@ -15,11 +15,6 @@ light_attack = pygame.image.load('images/ult.png').convert_alpha()
 leg_attack = pygame.image.load('images/LegAttack.png').convert_alpha()
 ult_attack = pygame.image.load('images/TornadoAttack.png').convert_alpha()  # Load ult attack sprite
 shield = pygame.image.load('images/Safe.png')  # Shield image (one frame)
-
-
-
-
-
 
 # Create Player object
 player = Player(100, 500, walk, light_attack, leg_attack, ult_attack, shield)
