@@ -13,7 +13,7 @@ class Player(pygame.sprite.Sprite):
         self.animation_cooldown = 150
         self.turtle_x = x
         self.turtle_y = y
-        self.speed = 0.5  # Normal speed
+        self.speed = 2  # Normal speed
         self.facing_right = True
 
         # Load sprite sheets
@@ -25,22 +25,22 @@ class Player(pygame.sprite.Sprite):
 
         # Load walking frames (5 frames)
         for i in range(5):
-            self.al.append(sprite_sheet.get_image(i, 54, 78, 2, (0, 0,0,0)))
+            self.al.append(sprite_sheet.get_image(i, 70, 78, 2, (0, 0, 0)))
 
         # Load light attack frames (3 frames)
         for i in range(3):
-            self.attack_frames.append(attack_sheet.get_image(i, 60, 74, 2, (0, 0, 0)))
+            self.attack_frames.append(attack_sheet.get_image(i, 88, 74, 2, (0, 0, 0)))
 
         # Load leg attack frames (4 frames)
-        for i in range(5):
-            self.leg_attack_frames.append(leg_attack_sheet.get_image(i, 57, 114, 2, (0, 0, 0)))
+        for i in range(4):
+            self.leg_attack_frames.append(leg_attack_sheet.get_image(i, 85, 114, 2, (0, 0, 0)))
 
         # Load ult frames (4 frames)
-        for i in range(3):
-            self.ult_frames.append(ult_sheet.get_image(i, 53, 100, 2, (0, 0, 0)))
+        for i in range(4):
+            self.ult_frames.append(ult_sheet.get_image(i, 101, 100, 2, (0, 0, 0)))
 
         # Load shield image (only one frame, scaled by 2)
-        self.shield_image = shield_sheet.get_image(0, 50, 87, 2, (0, 0, 0))
+        self.shield_image = shield_sheet.get_image(0, 72, 87, 2, (0, 0, 0))
 
         self.image = self.al[self.frame]
         self.frame_width = self.image.get_width()

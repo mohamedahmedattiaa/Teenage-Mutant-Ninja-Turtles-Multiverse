@@ -11,7 +11,7 @@ pygame.display.set_caption("Meta venv \\ Miky Level")
 # Load background and sprite images
 bg_index = pygame.image.load('images/floor.jpg')
 walk = pygame.image.load('images/walk.png').convert_alpha()
-light_attack = pygame.image.load('images/La.png').convert_alpha()
+light_attack = pygame.image.load('images/lightAttak.png').convert_alpha()
 leg_attack = pygame.image.load('images/legA.png').convert_alpha()
 ult_attack = pygame.image.load('images/ult.png').convert_alpha()  # Load ult attack sprite
 shield = pygame.image.load('images/safe.png')  # Shield image (one frame)
