@@ -1,7 +1,7 @@
 import pygame
 from player import Player  # Import the Player class from player.py
 
-# Initialize Pygamed
+# Initialize
 pygame.init()
 
 # Set up the screen
