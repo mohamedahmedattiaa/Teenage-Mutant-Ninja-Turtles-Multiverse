@@ -19,7 +19,7 @@ shield = pygame.image.load('images/safe.png')  # Shield image (one frame)
 # Create Player object
 player = Player(100, 500, walk, light_attack, leg_attack, ult_attack, shield)
 
-# Game loop
+
 running = True
 while running:
     screen.blit(bg_index, (0, 0))
