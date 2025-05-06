@@ -3,6 +3,7 @@ from sprits import Spritesheet
 
 class Player(pygame.sprite.Sprite):
     def __init__(self, x, y, sprite_image, attack_image, leg_attack_image, ult_image, shield_image):
+        sprite_sheet = Spritesheet(sprite_image)
         super().__init__()
         self.al = []  # Walk frames
         self.attack_frames = []  # Light attack frames
@@ -22,7 +23,6 @@ class Player(pygame.sprite.Sprite):
         leg_attack_sheet = Spritesheet(leg_attack_image)
         ult_sheet = Spritesheet(ult_image)
         shield_sheet = Spritesheet(shield_image)
-
         # Load walking frames (5 frames)
         for i in range(3):
             self.al.append(sprite_sheet.get_image(i, 59, 78, 2, (0, 0,0,0)))
