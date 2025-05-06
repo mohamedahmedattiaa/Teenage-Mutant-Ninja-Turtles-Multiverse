@@ -31,9 +31,9 @@ class Player(pygame.sprite.Sprite):
         for i in range(3):
             self.attack_frames.append(attack_sheet.get_image(i, 121, 74, 2, (0, 0, 0)))
 
-        # Load leg attack frames (4 frames)
-        for i in range(4):
-            self.leg_attack_frames.append(leg_attack_sheet.get_image(i, 71, 114, 2, (0, 0, 0)))
+        # Load leg attack frames (2 frames)
+        for i in range(2):
+            self.leg_attack_frames.append(leg_attack_sheet.get_image(i, 101, 114, 2, (0, 0, 0)))
 
         # Load ult frames (4 frames)
         for i in range(4):
