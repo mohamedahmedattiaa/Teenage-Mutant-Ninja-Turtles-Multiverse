@@ -201,6 +201,7 @@ class Player(pygame.sprite.Sprite):
                     self.frame = 0
             self.image = self.ult_frames[self.frame]
         elif self.is_leg_attacking:
+      #
             if current_time - self.last_update >= self.animation_cooldown:
                 self.frame += 1
                 self.last_update = current_time
