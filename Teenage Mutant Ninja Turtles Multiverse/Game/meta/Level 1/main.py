@@ -19,9 +19,6 @@ shield = pygame.image.load('images/Safe.png')  # Shield image (one frame)
 
 
 
-
-
-
 # Create Player object
 player = Player(100, 500, walk, light_attack, Jump_attack, ult_attack, shield)
 
