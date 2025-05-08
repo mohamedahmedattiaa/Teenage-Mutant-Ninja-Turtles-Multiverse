@@ -4,8 +4,8 @@ from sprits import Spritesheet
 
 # Initialize Pygamed
 pygame.init()
-
-# Set up the screen
+#
+# Set up the screen ##
 screen = pygame.display.set_mode((1280, 720))
 pygame.display.set_caption("Leo Level")
 
@@ -16,9 +16,6 @@ light_attack = pygame.image.load('images/ult.png').convert_alpha()
 Jump_attack = pygame.image.load('images/PowerfullLegAttack.png').convert_alpha()
 ult_attack = pygame.image.load('images/TornadoAttack.png').convert_alpha()  # Load ult attack sprite
 shield = pygame.image.load('images/Safe.png')  # Shield image (one frame)
-
-
-
 
 
 
