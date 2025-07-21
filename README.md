@@ -105,8 +105,8 @@ Teenage-Mutant-Ninja-Turtles-Multiverse/
 
 ## 👨‍💻 Developed by
 
-**Mohamed Ahmed Attia**
-**Menna Tarek Sobhy**
-**Ezz eldeen Ayman Alshwadfy**
-**Menna Ayman Nasr**
+**Mohamed Ahmed Attia** |
+**Menna Tarek Sobhy**   |
+**Ezz eldeen Ayman Alshwadfy** |
+**Menna Ayman Nasr** 
 
